@@ -1,8 +1,7 @@
 <template lang="pug">
   #app
     img(src='./assets/logo.png')
-    h1 Top Artists with Vue.js
-    h2 {{ msg }}
+    h1 {{ title }}
     select(v-model="selectedCountry")
       option(v-for="country in countries" :value="country.value") {{ country.name }}
     ul
@@ -32,7 +31,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      title: 'Welcome to the project "Top artists by country" with Vue.js',
       artists: [],
       countries: [
         {name: 'Argentina', value: 'argentina'},
